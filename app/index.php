@@ -1,12 +1,12 @@
 <?php
 require_once 'integration.php';
-$startTime = date("Y-m-d H:i:s");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $price = $_POST['price'];
+    $startTime = $_POST['startTime'];
 
     $stopTime = date("Y-m-d H:i:s");
 
@@ -25,6 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <body>
         <div class="container">
             <form method="post" action="">
+                <div class="d-none">
+                    <input type="text" name="startTime" value="<?=date("Y-m-d H:i:s")?>">
+                </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="row mt-4">
